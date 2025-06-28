@@ -4,7 +4,7 @@ import 'package:epicboymoses/core/global_widegts/custom_text_field.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:epicboymoses/feature/auth/forget_pasword/view/forgot_pasword.dart';
 import 'package:epicboymoses/feature/auth/login/widget/privacy_text.dart';
-import 'package:epicboymoses/feature/auth/signup/select_role/view/select_role_screen.dart';
+import 'package:epicboymoses/feature/auth/select_role/view/select_role_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
