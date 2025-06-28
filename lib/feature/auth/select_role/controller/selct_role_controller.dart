@@ -1,3 +1,4 @@
+import 'package:epicboymoses/feature/auth/cleaner_flow/cleaner_signup.dart';
 import 'package:epicboymoses/feature/auth/user_signup/user_signup.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ class SelctRoleController extends GetxController {
     if (selectedRole.value == "User") {
       Get.to(() => UserSignup());
     } else {
-      Get.snackbar('Error', 'Please select a role');
+      Get.to(() => CleanerSignup());
     }
   }
 }
