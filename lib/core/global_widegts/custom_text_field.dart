@@ -1,58 +1,61 @@
+import 'package:epicboymoses/core/const/app_colors.dart';
+import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../const/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     this.hitText,
-    required this.textEditingController,
+    this.title,
+    required this.controller,
     this.fontSize,
     this.fontWeight,
     this.lineHeight,
   });
   final String? hitText;
+  final String? title;
   final double? fontSize;
   final FontWeight? fontWeight;
   final double? lineHeight;
-  final TextEditingController textEditingController;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 35.h,
-      width: 273.w,
-      child: TextField(
-        controller: textEditingController,
-        style: GoogleFonts.poppins(
-            fontSize: fontSize ?? 16.sp,
-            fontWeight: fontWeight ?? FontWeight.w400,
-            height: lineHeight ?? 24.h / 16.h,
-            color: AppColors.blackColor),
-        decoration: InputDecoration(
-          contentPadding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
-          hintText: hitText,
-          hintStyle: GoogleFonts.poppins(
-              fontSize: fontSize ?? 16.sp,
-              fontWeight: fontWeight ?? FontWeight.w400,
-              height: lineHeight ?? 24.h / 16.h,
-              color: AppColors.blackColor),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(color: Color(0xff010101), width: 1),
+    return Column(
+      children: [
+        Row(
+          children: [
+            Text(title ?? "", style: globalTextStyle()),
+            SizedBox(width: 5),
+            Icon(Icons.star, color: AppColors.primaryColor, size: 12),
+          ],
+        ),
+        SizedBox(height: 10),
+        Container(
+          decoration: BoxDecoration(
+            color: Color(0xff1E1E24).withValues(alpha: 0.04),
+            borderRadius: BorderRadius.circular(15),
           ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(color: Color(0xff010101), width: 1),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10.r),
-            borderSide: const BorderSide(color: Color(0xff010101), width: 1),
+          child: TextFormField(
+            controller: controller,
+            style: globalTextStyle(
+              color: Color(0xff1E1E24).withValues(alpha: 0.34),
+            ),
+            decoration: InputDecoration(
+              hintText: hitText ?? "Enter text here",
+              hintStyle: globalTextStyle(
+                color: Color(0xff1E1E24).withValues(alpha: 0.34),
+              ),
+              contentPadding: EdgeInsets.symmetric(
+                horizontal: 10.w,
+                vertical: 10.h,
+              ),
+              border: InputBorder.none,
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }

@@ -2,14 +2,13 @@ import 'package:epicboymoses/core/const/app_colors.dart';
 import 'package:epicboymoses/core/global_widegts/custom_button.dart';
 import 'package:epicboymoses/core/global_widegts/custom_text_field.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
-import 'package:epicboymoses/feature/auth/forget_pasword/view/forgot_pasword.dart';
+import 'package:epicboymoses/feature/auth/login/view/login_view.dart';
 import 'package:epicboymoses/feature/auth/login/widget/privacy_text.dart';
-import 'package:epicboymoses/feature/auth/signup/select_role/view/select_role_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class UserSignup extends StatelessWidget {
+  const UserSignup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +20,7 @@ class LoginView extends StatelessWidget {
           children: [
             Center(child: Image.asset("assets/icons/logo.png", width: 80)),
             Text(
-              "Sign In Account",
+              "Create An Account",
               style: globalTextStyle(fontSize: 24, fontWeight: FontWeight.w600),
             ),
             Text(
@@ -35,6 +34,12 @@ class LoginView extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             CustomTextField(
+              title: "Full Name",
+              hitText: "Enter your full name",
+              controller: TextEditingController(),
+            ),
+            const SizedBox(height: 20),
+            CustomTextField(
               title: "Email",
               hitText: "Enter your email",
               controller: TextEditingController(),
@@ -45,32 +50,17 @@ class LoginView extends StatelessWidget {
               title: "Password",
               hitText: "Enter your password",
             ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {
-                  Get.to(() => ForgotPasword());
-                },
-                child: Text(
-                  "Forgot Password?",
-                  style: globalTextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w500,
-                    color: AppColors.primaryColor,
-                  ),
-                ),
-              ),
-            ),
+
             Spacer(),
             CustomRichText(),
             const SizedBox(height: 20),
-            CustomButton(title: "Sign In", onPressed: () {}),
+            CustomButton(title: "Sign Up", onPressed: () {}),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have an account? ",
+                  "Already have an account? ",
                   style: globalTextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w400,
@@ -79,10 +69,10 @@ class LoginView extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Get.to(() => SelectRoleScreen());
+                    Get.offAll(() => LoginView());
                   },
                   child: Text(
-                    "Sign Up",
+                    "Log in",
                     style: globalTextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w600,

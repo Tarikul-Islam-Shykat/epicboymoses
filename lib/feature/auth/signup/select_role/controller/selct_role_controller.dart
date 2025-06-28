@@ -1,3 +1,4 @@
+import 'package:epicboymoses/feature/auth/user_signup/user_signup.dart';
 import 'package:get/get.dart';
 
 class SelctRoleController extends GetxController {
@@ -9,7 +10,7 @@ class SelctRoleController extends GetxController {
 
   void nextPage() {
     if (selectedRole.value == "User") {
-      Get.toNamed('/nextPage');
+      Get.to(() => UserSignup());
     } else {
       Get.snackbar('Error', 'Please select a role');
     }
