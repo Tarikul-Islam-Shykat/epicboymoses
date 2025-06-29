@@ -2,14 +2,14 @@ import 'package:epicboymoses/core/const/app_colors.dart';
 import 'package:epicboymoses/core/global_widegts/custom_button.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:epicboymoses/feature/auth/cleaner_signup/controller/cleaner_signup_controller.dart';
+import 'package:epicboymoses/feature/auth/cleaner_signup/view/pending_meeting.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class TimeSelectView extends StatelessWidget {
   TimeSelectView({super.key});
-  final controller = Get.put(
-    CleanerSignupController(),
-  ); // Ensure single instance
+  final controller = Get.find<CleanerSignupController>();
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +62,7 @@ class TimeSelectView extends StatelessWidget {
                       "Meet an appointment with our team !",
                       style: globalTextStyle(fontSize: 16),
                     ),
+                    const SizedBox(height: 20),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -190,11 +191,25 @@ class TimeSelectView extends StatelessWidget {
                                               )
                                             : Color(0xffF6F6F6),
                                         borderRadius: BorderRadius.circular(10),
+                                        border: Border.all(
+                                          color:
+                                              controller.selectedTime.value ==
+                                                  times[index]
+                                              ? AppColors.primaryColor
+                                              : Colors.white,
+                                        ),
                                       ),
                                       child: Center(
                                         child: Text(
                                           times[index],
-                                          style: globalTextStyle(fontSize: 12),
+                                          style: globalTextStyle(
+                                            fontSize: 12,
+                                            color:
+                                                controller.selectedTime.value ==
+                                                    times[index]
+                                                ? AppColors.primaryColor
+                                                : Colors.black,
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -213,8 +228,18 @@ class TimeSelectView extends StatelessWidget {
             CustomButton(
               title: "Schedule Meeting",
               onPressed: () {
-                print(
-                  "Scheduled for ${controller.selectedDate.value} at ${controller.selectedTime.value}",
+                if (kDebugMode) {
+                  print(
+                    "Scheduled for ${controller.selectedDate.value} at ${controller.selectedTime.value}",
+                  );
+                }
+
+                Get.to(
+                  () => PendingMeeting(
+                    date: controller.selectedDate.value.toString(),
+                    time: controller.selectedTime.value,
+                    meetingLink: "https://example.com/meeting-link",
+                  ),
                 );
               },
             ),
