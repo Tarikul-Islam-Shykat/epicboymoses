@@ -4,6 +4,7 @@ import 'package:epicboymoses/core/global_widegts/custom_text_field.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:epicboymoses/feature/auth/login/view/login_view.dart';
 import 'package:epicboymoses/feature/auth/login/widget/privacy_text.dart';
+import 'package:epicboymoses/feature/auth/user_signup/user_signup_otp_verification_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -54,7 +55,12 @@ class UserSignup extends StatelessWidget {
             Spacer(),
             CustomRichText(),
             const SizedBox(height: 20),
-            CustomButton(title: "Sign Up", onPressed: () {}),
+            CustomButton(
+              title: "Sign Up",
+              onPressed: () {
+                Get.to(() => UserSignupOtpVerificationScreen());
+              },
+            ),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
