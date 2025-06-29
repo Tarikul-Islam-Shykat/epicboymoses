@@ -1,11 +1,14 @@
 import 'package:epicboymoses/core/global_widegts/custom_button.dart';
 import 'package:epicboymoses/core/global_widegts/custom_text_field.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
+import 'package:epicboymoses/feature/auth/cleaner_signup/controller/cleaner_signup_controller.dart';
+import 'package:epicboymoses/feature/auth/cleaner_signup/view/time_select_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CleanerSignup extends StatelessWidget {
-  const CleanerSignup({super.key});
-
+  CleanerSignup({super.key});
+  final controller = Get.put(CleanerSignupController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +102,12 @@ class CleanerSignup extends StatelessWidget {
                 ),
               ),
             ),
-            CustomButton(title: "Next", onPressed: () {}),
+            CustomButton(
+              title: "Next",
+              onPressed: () {
+                Get.to(() => TimeSelectView());
+              },
+            ),
             const SizedBox(height: 30),
           ],
         ),

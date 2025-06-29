@@ -1,4 +1,4 @@
-import 'package:epicboymoses/feature/auth/cleaner_flow/cleaner_signup.dart';
+import 'package:epicboymoses/feature/auth/cleaner_signup/view/cleaner_signup.dart';
 import 'package:epicboymoses/feature/auth/user_signup/user_signup.dart';
 import 'package:get/get.dart';
 
