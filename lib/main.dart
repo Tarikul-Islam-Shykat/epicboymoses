@@ -36,6 +36,11 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) => GetMaterialApp(
+        theme: ThemeData(
+          primaryColor: AppColors.primaryColor,
+          scaffoldBackgroundColor: Color(0xffF5F4F9),
+          fontFamily: 'Poppins',
+        ),
         debugShowCheckedModeBanner: false,
         title: 'Epic Boy Moses',
         getPages: AppRoute.routes,

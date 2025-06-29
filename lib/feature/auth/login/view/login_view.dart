@@ -5,6 +5,7 @@ import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:epicboymoses/feature/auth/forget_pasword/view/forgot_pasword.dart';
 import 'package:epicboymoses/feature/auth/login/widget/privacy_text.dart';
 import 'package:epicboymoses/feature/auth/select_role/view/select_role_screen.dart';
+import 'package:epicboymoses/feature/user/bottom_navbar/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -64,7 +65,12 @@ class LoginView extends StatelessWidget {
             Spacer(),
             CustomRichText(),
             const SizedBox(height: 20),
-            CustomButton(title: "Sign In", onPressed: () {}),
+            CustomButton(
+              title: "Sign In",
+              onPressed: () {
+                Get.to(() => UserBottomNavBar());
+              },
+            ),
             const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
