@@ -169,7 +169,7 @@ class UserHomeView extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 0.9,
+                  childAspectRatio: 0.92,
                   mainAxisSpacing: 12,
                   crossAxisSpacing: 12,
                 ),
@@ -180,13 +180,10 @@ class UserHomeView extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(16),
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 6,
-                          offset: Offset(0, 3),
-                        ),
-                      ],
+                      border: Border.all(
+                        color: const Color(0xFFEEEEEE),
+                        width: 1,
+                      ),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -208,6 +205,7 @@ class UserHomeView extends StatelessWidget {
                                     style: globalTextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 13,
+                                      color: Color(0xff4B4B50),
                                     ),
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
@@ -222,7 +220,10 @@ class UserHomeView extends StatelessWidget {
                                       const SizedBox(width: 4),
                                       Text(
                                         '(${user['rating']}/5)',
-                                        style: globalTextStyle(fontSize: 12),
+                                        style: globalTextStyle(
+                                          fontSize: 12,
+                                          color: Color(0xff4B4B50),
+                                        ),
                                       ),
                                     ],
                                   ),
@@ -253,11 +254,15 @@ class UserHomeView extends StatelessWidget {
                             Expanded(
                               child: Text(
                                 user['location']!,
-                                style: globalTextStyle(fontSize: 12),
+                                style: globalTextStyle(
+                                  fontSize: 10,
+                                  color: Color(0xff4B4B50),
+                                ),
                               ),
                             ),
                           ],
                         ),
+                        SizedBox(height: 4),
                         Row(
                           children: [
                             Container(
@@ -277,10 +282,14 @@ class UserHomeView extends StatelessWidget {
                             const SizedBox(width: 4),
                             Text(
                               user['rate']!,
-                              style: globalTextStyle(fontSize: 12),
+                              style: globalTextStyle(
+                                fontSize: 10,
+                                color: Color(0xff4B4B50),
+                              ),
                             ),
                           ],
                         ),
+                        SizedBox(height: 4),
                         Row(
                           children: [
                             const Icon(
@@ -292,7 +301,10 @@ class UserHomeView extends StatelessWidget {
                             Flexible(
                               child: Text(
                                 user['type']!,
-                                style: globalTextStyle(fontSize: 12),
+                                style: globalTextStyle(
+                                  fontSize: 10,
+                                  color: Color(0xff4B4B50),
+                                ),
                               ),
                             ),
                           ],
