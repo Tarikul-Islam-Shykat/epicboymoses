@@ -63,4 +63,6 @@ class AddBookingDetailsController extends GetxController {
 
 
 
+
+
 }

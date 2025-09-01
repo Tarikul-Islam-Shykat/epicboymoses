@@ -3,6 +3,7 @@ import 'package:epicboymoses/core/global_widegts/custom_button.dart';
 import 'package:epicboymoses/core/global_widegts/custom_text_field.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:epicboymoses/feature/user/add_booking_details/controller/add_booking_details_controller.dart';
+import 'package:epicboymoses/route/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -97,7 +98,9 @@ class AddBookingDetailsScreen2 extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Get.toNamed(AppRoute.bookingConfirmationScreen);
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

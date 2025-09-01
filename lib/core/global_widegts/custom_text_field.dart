@@ -13,11 +13,12 @@ class CustomTextField extends StatelessWidget {
     this.fontWeight,
     this.lineHeight,
   });
+
   final String? hitText;
   final String? title;
   final double? fontSize;
   final FontWeight? fontWeight;
-  final double? lineHeight;
+  final int? lineHeight;
   final TextEditingController controller;
 
   @override
@@ -28,7 +29,7 @@ class CustomTextField extends StatelessWidget {
           children: [
             Text(title ?? "", style: globalTextStyle()),
             SizedBox(width: 5),
-            Icon( Icons.star, color: AppColors.primaryColor, size: 12),
+            Icon(Icons.star, color: AppColors.primaryColor, size: 12),
           ],
         ),
         SizedBox(height: 10),
@@ -39,9 +40,8 @@ class CustomTextField extends StatelessWidget {
           ),
           child: TextFormField(
             controller: controller,
-            style: globalTextStyle(
-              color: Color(0xff1E1E24).withValues(alpha: 0.34),
-            ),
+            maxLines: lineHeight ?? 1,
+            style: globalTextStyle(color: AppColors.blackColor),
             decoration: InputDecoration(
               hintText: hitText ?? "Enter text here",
               hintStyle: globalTextStyle(

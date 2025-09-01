@@ -2,6 +2,7 @@ import 'package:epicboymoses/feature/user/add_booking_details/screen/add_booking
 import 'package:epicboymoses/feature/user/add_booking_details/screen/add_booking_details_screen2.dart';
 import 'package:get/get.dart';
 import '../feature/splash_screen/screen/splash_screen.dart';
+import '../feature/user/add_booking_details/screen/booking_confirmation_screen.dart';
 
 class AppRoute {
   static String splashScreen = '/splashScreen';
@@ -10,6 +11,7 @@ class AppRoute {
   static String resetPassScreen = "/resetPassScreen";
   static String addBookingDetails1Screen = "/addBookingDetails1";
   static String addBookingDetails2Screen = "/addBookingDetails2";
+  static String bookingConfirmationScreen = "/bookingConfirmation";
 
   static String getSplashScreen() => splashScreen;
 
@@ -17,5 +19,6 @@ class AppRoute {
     GetPage(name: splashScreen, page: () => const SplashScreen()),
     GetPage(name: addBookingDetails1Screen, page: () => const AddBookingDetailsScreen1()),
     GetPage(name: addBookingDetails2Screen, page: () => const AddBookingDetailsScreen2()),
+    GetPage(name: bookingConfirmationScreen, page: () => const BookingConfirmationScreen()),
   ];
 }
