@@ -2,6 +2,7 @@ import 'package:epicboymoses/core/const/app_colors.dart';
 import 'package:epicboymoses/feature/user/home/view/user_home_view.dart';
 import 'package:epicboymoses/feature/user/saved/screen/saved_screen.dart';
 import 'package:epicboymoses/feature/user/search_screen/screen/search_screen.dart';
+import 'package:epicboymoses/feature/user/user_profile/screen/user_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,7 +26,7 @@ class UserBottomNavBar extends StatelessWidget {
     SearchScreen(),
     Center(child: Text('Chat Page')),
     SavedScreen(),
-    Center(child: Text('Profile Page')),
+    UserProfileScreen()
   ];
 
   @override

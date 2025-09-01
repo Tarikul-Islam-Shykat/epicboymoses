@@ -28,7 +28,7 @@ class CustomTextField extends StatelessWidget {
           children: [
             Text(title ?? "", style: globalTextStyle()),
             SizedBox(width: 5),
-            Icon(Icons.star, color: AppColors.primaryColor, size: 12),
+            Icon( Icons.star, color: AppColors.primaryColor, size: 12),
           ],
         ),
         SizedBox(height: 10),

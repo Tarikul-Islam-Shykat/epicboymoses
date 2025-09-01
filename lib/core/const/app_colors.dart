@@ -4,10 +4,10 @@ class AppColors {
   static const Color primaryColor = Color(0xff4FD1C5);
   static const Color secondaryColor = Color(0xff000710);
   static const Color statusColor = Color(0xffFFD233);
-  static const Color bgColor = Colors.white;
+  static const Color bgColor = Color(0xFFF7F5FA);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
-  static const Color grayColor = Colors.grey;
+  static const Color grayColor = Color(0xff1E1E1E);
   static Color redcolor = Colors.red;
   static Color tealAcent = const Color(0xff02cbd2);
   static Color unselect = const Color(0xffD0D5DD);
@@ -20,4 +20,6 @@ class AppColors {
   static Color boderColor = const Color(0xffD0D5DD);
   static Color greenColor = Colors.green;
   static Color fieldColor = Colors.grey.shade200;
+  
+  
 }
