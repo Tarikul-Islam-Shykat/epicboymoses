@@ -12,6 +12,7 @@ class CustomTextField extends StatelessWidget {
     this.fontSize,
     this.fontWeight,
     this.lineHeight,
+    this.isObscure
   });
 
   final String? hitText;
@@ -20,6 +21,8 @@ class CustomTextField extends StatelessWidget {
   final FontWeight? fontWeight;
   final int? lineHeight;
   final TextEditingController controller;
+  final bool? isObscure;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +42,7 @@ class CustomTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
           child: TextFormField(
+            obscureText: isObscure ?? false,
             controller: controller,
             maxLines: lineHeight ?? 1,
             style: globalTextStyle(color: AppColors.blackColor),

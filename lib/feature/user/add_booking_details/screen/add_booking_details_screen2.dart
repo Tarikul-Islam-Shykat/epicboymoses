@@ -46,7 +46,7 @@ class AddBookingDetailsScreen2 extends StatelessWidget {
                     ),
                     SizedBox(width: 50),
                     Text(
-                      "Add Booking Details",
+                      "Edit Profile",
                       style: globalTextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,

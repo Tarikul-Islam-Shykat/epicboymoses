@@ -1,3 +1,4 @@
+import 'package:epicboymoses/core/bindings/appbindings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         getPages: AppRoute.routes,
         initialRoute: AppRoute.splashScreen,
         builder: EasyLoading.init(),
+        initialBinding: AppBindings(),
       ),
     );
   }

@@ -1,8 +1,11 @@
 import 'package:epicboymoses/core/const/icons_path.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
+import 'package:epicboymoses/route/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:path/path.dart';
 
 class UserProfileScreen extends StatelessWidget {
@@ -27,6 +30,7 @@ class UserProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(height: 20),
 
               // header
               Container(
@@ -105,7 +109,9 @@ class UserProfileScreen extends StatelessWidget {
                           // SizedBox(width: 10),
                           Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.toNamed(AppRoute.editProfileScreen);
+                            },
                             icon: Icon(Icons.edit),
                             iconSize: 25,
                             color: Color(0xff4FD1C5),
@@ -136,12 +142,41 @@ class UserProfileScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   color: Colors.white,
                 ),
-                child: Column(children: [
-                    _profileWidget(context, IconsPath.actionButton ,"My Booking", (){},true),
-                    _profileWidget(context, IconsPath.pass ,"Change Password", (){},true),
-                    _profileWidget(context, IconsPath.aboutus ,"About Us", (){},true),
-                    _profileWidget(context, IconsPath.privacypolicy ,"About Us", (){},false),
-                    ],
+                child: Column(
+                  children: [
+                    _profileWidget(
+                      context,
+                      IconsPath.stear,
+                      "My Booking",
+                      () {
+                        Get.toNamed(AppRoute.myBookingsScreen);
+                      },
+                      true,
+                    ),
+                    _profileWidget(
+                      context,
+                      IconsPath.pass,
+                      "Change Password",
+                      () {
+                        Get.toNamed(AppRoute.changePasswordScreen);
+                      },
+                      true,
+                    ),
+                    _profileWidget(
+                      context,
+                      IconsPath.aboutus,
+                      "About Us",
+                      () {},
+                      true,
+                    ),
+                    _profileWidget(
+                      context,
+                      IconsPath.privacypolicy,
+                      "Privacy Policy",
+                      () {},
+                      false,
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -152,8 +187,12 @@ class UserProfileScreen extends StatelessWidget {
   }
 }
 
-Widget _profileWidget(BuildContext context, String iconPath, String title, 
-VoidCallback onPressed, bool showUnderLine
+Widget _profileWidget(
+  BuildContext context,
+  String iconPath,
+  String title,
+  VoidCallback onPressed,
+  bool showUnderLine,
 ) {
   // final String iconPath;
   // final String title;
@@ -189,14 +228,17 @@ VoidCallback onPressed, bool showUnderLine
             // arrow
             GestureDetector(
               onTap: onPressed,
-              child: Icon(Icons.keyboard_arrow_right_outlined, size: 35)),
+              child: Icon(Icons.keyboard_arrow_right_outlined, size: 35),
+            ),
           ],
         ),
       ),
-      showUnderLine ? Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Divider(color: Colors.grey.withAlpha(90)),
-      ) : SizedBox(height: 10),
+      showUnderLine
+          ? Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Divider(color: Colors.grey.withAlpha(90)),
+            )
+          : SizedBox(height: 10),
     ],
   );
 }

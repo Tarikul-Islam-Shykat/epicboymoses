@@ -7,4 +7,5 @@ class IconsPath {
   static const String privacypolicy = "assets/icons/privacypolicy.svg";
   static const String aboutus = "assets/icons/aboutus.svg";
   static const String stear = "assets/icons/stear.svg";
+  static const String dollar = "assets/icons/dollar.svg";
 }
