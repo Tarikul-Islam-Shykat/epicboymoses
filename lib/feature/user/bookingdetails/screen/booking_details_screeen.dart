@@ -1,10 +1,13 @@
 import 'package:epicboymoses/core/const/app_colors.dart';
 import 'package:epicboymoses/core/const/icons_path.dart';
 import 'package:epicboymoses/core/const/image_path.dart';
+import 'package:epicboymoses/core/global_widegts/custom_button.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:timeline_tile_plus/timeline_tile_plus.dart';
 
 class BookingDetailsScreen extends StatelessWidget {
@@ -333,6 +336,16 @@ class BookingDetailsScreen extends StatelessWidget {
               ),
             ],
           ),
+        ),
+      ),
+      bottomSheet: Container(
+        decoration: BoxDecoration(color: AppColors.whiteColor),
+        padding: EdgeInsets.only(bottom: 30, left: 20, right: 20, top: 20),
+        child: CustomButton(
+          title: "Approved",
+          onPressed: () {
+            Get.back();
+          },
         ),
       ),
     );

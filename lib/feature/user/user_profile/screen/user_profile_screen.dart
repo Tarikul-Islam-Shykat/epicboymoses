@@ -1,5 +1,6 @@
 import 'package:epicboymoses/core/const/icons_path.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
+import 'package:epicboymoses/feature/user/user_profile/controller/user_profile_controller.dart';
 import 'package:epicboymoses/route/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -11,8 +12,10 @@ import 'package:path/path.dart';
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
+    UserProfileController userProfileController = Get.put(UserProfileController());
     return Scaffold(
       backgroundColor: const Color(0xFFF7F5FA),
       body: SafeArea(
