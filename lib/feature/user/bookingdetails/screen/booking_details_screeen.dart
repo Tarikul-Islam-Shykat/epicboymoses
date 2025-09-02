@@ -42,7 +42,7 @@ class BookingDetailsScreen extends StatelessWidget {
                     ),
                     const Spacer(),
                     Text(
-                      "My Bookings",
+                      "Booking Details",
                       style: globalTextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,
@@ -64,10 +64,11 @@ class BookingDetailsScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              SizedBox(height: 10.h),
 
               // map
               SizedBox(
-                height: 450.h,
+                height: 420.h,
                 child: Stack(
                   children: [
                     ClipRRect(
@@ -79,6 +80,7 @@ class BookingDetailsScreen extends StatelessWidget {
                       ),
                     ),
                     Positioned(
+                      top: 190.h,
                       child: SizedBox(
                         height: 200.h,
                         width: 320.w,
@@ -212,7 +214,7 @@ class BookingDetailsScreen extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 5.h),
+                                SizedBox(height: 10.h),
                                 // timeline
                                 Padding(
                                   padding: EdgeInsets.symmetric(
@@ -223,32 +225,59 @@ class BookingDetailsScreen extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       CircleAvatar(
-                                        child: Icon(
-                                          Icons.directions_bike_outlined,
-                                          color: AppColors.whiteColor,
+                                        maxRadius: 25,
+                                        child: SvgPicture.asset(
+                                          IconsPath.starting,
+                                          height: 15.h,
                                         ),
+
                                         backgroundColor: AppColors.primaryColor,
                                       ),
-                                      CircleAvatar(
-                                        child: Icon(
-                                          Icons.directions_bike_outlined,
-                                          color: AppColors.whiteColor,
+                                      Expanded(
+                                        child: Divider(
+                                          color: AppColors.primaryColor,
+                                          thickness: 5,
                                         ),
-                                        backgroundColor: AppColors.primaryColor,
                                       ),
                                       CircleAvatar(
-                                        child: Icon(
-                                          Icons.person_2_outlined,
-                                          color: AppColors.whiteColor,
+                                        child: SvgPicture.asset(
+                                          IconsPath.ride,
+                                          height: 15.h,
                                         ),
-                                        backgroundColor: AppColors.primaryColor,
+                                        backgroundColor: AppColors.grayColor
+                                            .withAlpha(20),
+                                      ),
+                                      Expanded(
+                                        child: Divider(
+                                          color: AppColors.grayColor.withAlpha(
+                                            20,
+                                          ),
+                                          thickness: 5,
+                                        ),
                                       ),
                                       CircleAvatar(
-                                        child: Icon(
-                                          Icons.money_sharp,
-                                          color: AppColors.whiteColor,
+                                        child: SvgPicture.asset(
+                                          IconsPath.people,
+                                          height: 15.h,
                                         ),
-                                        backgroundColor: AppColors.primaryColor,
+                                        backgroundColor: AppColors.grayColor
+                                            .withAlpha(20),
+                                      ),
+                                      Expanded(
+                                        child: Divider(
+                                          color: AppColors.grayColor.withAlpha(
+                                            20,
+                                          ),
+                                          thickness: 5,
+                                        ),
+                                      ),
+                                      CircleAvatar(
+                                        child: SvgPicture.asset(
+                                          IconsPath.money,
+                                          height: 15.h,
+                                        ),
+                                        backgroundColor: AppColors.grayColor
+                                            .withAlpha(20),
                                       ),
                                     ],
                                   ),
@@ -269,27 +298,37 @@ class BookingDetailsScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-
-                    // Positioned(
-                    //   top: getWidth(200),
-                    //   left: getWidth(20),
-                    //   right: getWidth(20),
-                    //   child: RiderDetailsDescriptionCard(
-                    //     riderName:
-                    //         dashboardController.recentRides[0].riderName,
-                    //     dateTime:
-                    //         dashboardController.recentRides[0].dateTime,
-                    //     pickupLocation:
-                    //         dashboardController
-                    //             .recentRides[0]
-                    //             .pickupLocation,
-                    //     dropOffLocation:
-                    //         dashboardController
-                    //             .recentRides[0]
-                    //             .dropOffLocation,
-                    //   ),
-                    // ),
                   ],
+                ),
+              ),
+
+              // booking note
+              Row(
+                children: [
+                  Text(
+                    'Booking Note',
+                    style: globalTextStyle(
+                      fontSize: 18.sp,
+                      color: AppColors.blackColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    '*',
+                    style: globalTextStyle(
+                      fontSize: 18.sp,
+                      color: AppColors.primaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+              Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
+                style: globalTextStyle(
+                  textAlign: TextAlign.justify,
+                  fontSize: 14.sp,
+                  color: AppColors.grayColor.withAlpha(90),
                 ),
               ),
             ],

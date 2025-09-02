@@ -8,4 +8,8 @@ class IconsPath {
   static const String aboutus = "assets/icons/aboutus.svg";
   static const String stear = "assets/icons/stear.svg";
   static const String dollar = "assets/icons/dollar.svg";
+  static const String money = "assets/icons/money.svg";
+  static const String people = "assets/icons/people.svg";
+  static const String ride = "assets/icons/ride.svg";
+  static const String starting = "assets/icons/starting.svg";
 }
