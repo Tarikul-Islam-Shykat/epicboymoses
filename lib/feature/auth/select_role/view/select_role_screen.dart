@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 class SelectRoleScreen extends StatelessWidget {
   SelectRoleScreen({super.key});
 
-  final controller = Get.put(SelctRoleController());
+  final controller = Get.put(SelectRoleController());
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +89,39 @@ class SelectRoleScreen extends StatelessWidget {
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
                         color: controller.selectedRole.value == "Cleaner"
+                            ? AppColors.primaryColor
+                            : Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+             const SizedBox(height: 10),
+            Obx(
+              () => InkWell(
+                onTap: () => controller.selectRole("Admin"),
+                child: Container(
+                  width: double.infinity,
+                  height: 88,
+                  decoration: BoxDecoration(
+                    color: controller.selectedRole.value == "Admin"
+                        ? AppColors.primaryColor.withValues(alpha: 0.05)
+                        : Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: controller.selectedRole.value == "Admin"
+                          ? AppColors.primaryColor
+                          : Colors.white,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Admin",
+                      style: globalTextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: controller.selectedRole.value == "Admin"
                             ? AppColors.primaryColor
                             : Colors.black,
                       ),

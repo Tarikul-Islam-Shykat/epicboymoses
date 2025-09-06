@@ -1,21 +1,21 @@
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/account_approved_screen.dart';
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/setup_profile_cleaner_screen.dart';
-import 'package:epicboymoses/feature/cleaner/booking_details/view/booking_details_cleaner.dart';
-import 'package:epicboymoses/feature/cleaner/bookings/view/bookings_screen_cleaner.dart';
-import 'package:epicboymoses/feature/cleaner/bottom_navbar_cleaner/view/bottom_nav_screen_cleaner.dart';
-import 'package:epicboymoses/feature/cleaner/home/view/home_screen_cleaner.dart';
-import 'package:epicboymoses/feature/cleaner/profile_cleaner/view/change_password_cleaner_screen.dart';
-import 'package:epicboymoses/feature/cleaner/profile_cleaner/view/cleaner_profile_screen.dart';
-import 'package:epicboymoses/feature/cleaner/profile_cleaner/view/edit_profile_cleaner_screen.dart';
-import 'package:epicboymoses/feature/user/add_booking_details/screen/add_booking_details_screen1.dart';
-import 'package:epicboymoses/feature/user/add_booking_details/screen/add_booking_details_screen2.dart';
-import 'package:epicboymoses/feature/user/bookingdetails/screen/booking_details_screeen.dart';
-import 'package:epicboymoses/feature/user/mybookings/screen/mybookings_screen.dart';
-import 'package:epicboymoses/feature/user/user_profile/screen/change_password_screen.dart';
-import 'package:epicboymoses/feature/user/user_profile/screen/edit_profile_screen.dart';
+import 'package:epicboymoses/feature/cleaner_flow/booking_details/view/booking_details_cleaner.dart';
+import 'package:epicboymoses/feature/cleaner_flow/bookings/view/bookings_screen_cleaner.dart';
+import 'package:epicboymoses/feature/cleaner_flow/bottom_navbar_cleaner/view/bottom_nav_screen_cleaner.dart';
+import 'package:epicboymoses/feature/cleaner_flow/home/view/home_screen_cleaner.dart';
+import 'package:epicboymoses/feature/cleaner_flow/profile_cleaner/view/change_password_cleaner_screen.dart';
+import 'package:epicboymoses/feature/cleaner_flow/profile_cleaner/view/cleaner_profile_screen.dart';
+import 'package:epicboymoses/feature/cleaner_flow/profile_cleaner/view/edit_profile_cleaner_screen.dart';
+import 'package:epicboymoses/feature/user_flow/add_booking_details/screen/add_booking_details_screen1.dart';
+import 'package:epicboymoses/feature/user_flow/add_booking_details/screen/add_booking_details_screen2.dart';
+import 'package:epicboymoses/feature/user_flow/bookingdetails/screen/booking_details_screeen.dart';
+import 'package:epicboymoses/feature/user_flow/mybookings/screen/mybookings_screen.dart';
+import 'package:epicboymoses/feature/user_flow/user_profile/screen/change_password_screen.dart';
+import 'package:epicboymoses/feature/user_flow/user_profile/screen/edit_profile_screen.dart';
 import 'package:get/get.dart';
 import '../feature/splash_screen/screen/splash_screen.dart';
-import '../feature/user/add_booking_details/screen/booking_confirmation_screen.dart';
+import '../feature/user_flow/add_booking_details/screen/booking_confirmation_screen.dart';
 
 class AppRoute {
   static String splashScreen = '/splashScreen';

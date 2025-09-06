@@ -1,4 +1,5 @@
 import 'package:epicboymoses/feature/auth/login/view/login_view.dart';
+import 'package:epicboymoses/feature/auth/select_role/view/select_role_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -20,9 +21,9 @@ class SplashScreenController extends GetxController {
         print("token2$token");
       }
       if (token.isNotEmpty) {
-        Get.offAll(() => LoginView());
+        Get.offAll(() => SelectRoleScreen());
       } else {
-        Get.offAll(() => LoginView());
+        Get.offAll(() => SelectRoleScreen());
       }
     });
 
