@@ -2,6 +2,9 @@ import 'package:epicboymoses/feature/admin_flow/booking_status/view/booking_stat
 import 'package:epicboymoses/feature/admin_flow/cleaner/view/cleaner_screen_admin.dart';
 import 'package:epicboymoses/feature/admin_flow/delivery/view/delivery_screen_admin.dart';
 import 'package:epicboymoses/feature/admin_flow/home_admin/view/home_admin_screen.dart';
+import 'package:epicboymoses/feature/admin_flow/profile_admin/view/individual_profile_admin_screen.dart';
+import 'package:epicboymoses/feature/admin_flow/profile_admin/view/profile_list_admin_screen.dart';
+import 'package:epicboymoses/feature/admin_flow/service_list/view/service_list_admin_screen.dart';
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/account_approved_screen.dart';
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/setup_profile_cleaner_screen.dart';
 import 'package:epicboymoses/feature/cleaner_flow/booking_details/view/booking_details_cleaner.dart';
@@ -46,6 +49,9 @@ class AppRoute {
   static String deliveryAdminScreen = "/deliveryAdmin";
   static String bookingStatusAdminScreen = "/bookingStatusAdmin";
   static String cleanAdminScreen = "/cleanAdmin";
+  static String profileListAdminScreen = "/profileListAdmin";
+  static String individualProfileListAdminScreen = "/individualProfileListAdmin";
+  static String serviceListAdminScreen = "/serviceListAdmin";
 
   static String getSplashScreen() => splashScreen;
 
@@ -71,5 +77,8 @@ class AppRoute {
     GetPage(name: deliveryAdminScreen, page: () =>  DeliveryScreenAdmin()),
     GetPage(name: bookingStatusAdminScreen, page: () =>  BookingStatusAdminScreen()),
     GetPage(name: cleanAdminScreen, page: () =>  CleanScreenAdmin()),
+    GetPage(name: profileListAdminScreen, page: () =>  ProfileListAdminScreen()),
+    GetPage(name: individualProfileListAdminScreen, page: () =>  IndividualProfileListAdminScreen()),
+    GetPage(name: serviceListAdminScreen, page: () =>  ServiceListAdminScreen()),
   ];
 }

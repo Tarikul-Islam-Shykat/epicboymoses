@@ -3,6 +3,7 @@ import 'package:epicboymoses/feature/admin_flow/booking_status/view/booking_stat
 import 'package:epicboymoses/feature/admin_flow/cleaner/view/cleaner_screen_admin.dart';
 import 'package:epicboymoses/feature/admin_flow/delivery/view/delivery_screen_admin.dart';
 import 'package:epicboymoses/feature/admin_flow/home_admin/view/home_admin_screen.dart';
+import 'package:epicboymoses/feature/admin_flow/profile_admin/view/profile_list_admin_screen.dart';
 import 'package:epicboymoses/feature/cleaner_flow/bookings/view/bookings_screen_cleaner.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +18,7 @@ class BottomNavbarAdminController extends GetxController {
     HomeAdminScreen(),
     DeliveryScreenAdmin(),
     CleanScreenAdmin(),
-    Center(child: Text('No Messages')),
+    ProfileListAdminScreen()
   ];
   final List<String> icons = [
     IconsPath.home,
