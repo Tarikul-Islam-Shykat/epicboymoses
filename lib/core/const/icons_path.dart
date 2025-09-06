@@ -12,4 +12,11 @@ class IconsPath {
   static const String people = "assets/icons/people.svg";
   static const String ride = "assets/icons/ride.svg";
   static const String starting = "assets/icons/starting.svg";
+  static const String bookings = "assets/icons/bookings.png";
+  static const String home = "assets/icons/home.png";
+  static const String message = 'assets/icons/message.png';
+  static const String saved =  'assets/icons/saved.png';
+  static const String profile = 'assets/icons/profile.png';
+  static const String notification = 'assets/icons/notification.svg';
+  static const String dollarNote = 'assets/icons/note.svg';
 }

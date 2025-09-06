@@ -1,8 +1,10 @@
 import 'package:epicboymoses/core/const/app_colors.dart';
 import 'package:epicboymoses/core/global_widegts/custom_button.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
+import 'package:epicboymoses/route/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PendingMeeting extends StatelessWidget {
@@ -53,7 +55,7 @@ class PendingMeeting extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "Prending Meeting",
+                  "Pending Meeting",
                   style: globalTextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
@@ -149,6 +151,7 @@ class PendingMeeting extends StatelessWidget {
                   final Uri url = Uri.parse(meetingLink!);
                   if (await canLaunchUrl(url)) {
                     await launchUrl(url, mode: LaunchMode.externalApplication);
+                    Get.toNamed(AppRoute.accountApprovedScreen);
                   } else {
                     // ignore: use_build_context_synchronously
                     ScaffoldMessenger.of(context).showSnackBar(
@@ -156,6 +159,7 @@ class PendingMeeting extends StatelessWidget {
                         content: Text("Could not launch the meeting link."),
                       ),
                     );
+                    Get.toNamed(AppRoute.accountApprovedScreen);
                   }
                 } else {
                   ScaffoldMessenger.of(context).showSnackBar(
