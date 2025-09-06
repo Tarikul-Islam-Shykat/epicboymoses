@@ -1,9 +1,12 @@
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/account_approved_screen.dart';
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/setup_profile_cleaner_screen.dart';
+import 'package:epicboymoses/feature/cleaner/booking_details/view/booking_details_cleaner.dart';
 import 'package:epicboymoses/feature/cleaner/bookings/view/bookings_screen_cleaner.dart';
 import 'package:epicboymoses/feature/cleaner/bottom_navbar_cleaner/view/bottom_nav_screen_cleaner.dart';
 import 'package:epicboymoses/feature/cleaner/home/view/home_screen_cleaner.dart';
+import 'package:epicboymoses/feature/cleaner/profile_cleaner/view/change_password_cleaner_screen.dart';
 import 'package:epicboymoses/feature/cleaner/profile_cleaner/view/cleaner_profile_screen.dart';
+import 'package:epicboymoses/feature/cleaner/profile_cleaner/view/edit_profile_cleaner_screen.dart';
 import 'package:epicboymoses/feature/user/add_booking_details/screen/add_booking_details_screen1.dart';
 import 'package:epicboymoses/feature/user/add_booking_details/screen/add_booking_details_screen2.dart';
 import 'package:epicboymoses/feature/user/bookingdetails/screen/booking_details_screeen.dart';
@@ -32,6 +35,9 @@ class AppRoute {
   static String homeScreenCleanerScreen = "/homeScreenCleaner";
   static String bookingsScreenCleanerScreen = "/bookingsScreenCleaner";
   static String cleanerProfileScreen = "/cleanerProfile";
+  static String editCleanerProfileScreen = "/editCleanerProfile";
+  static String changePasswordCleanerScreen = "/changePasswordCleaner";
+  static String bookingDetailsCleanerScreen = "/bookingDetailsCleaner";
 
   static String getSplashScreen() => splashScreen;
 
@@ -50,5 +56,8 @@ class AppRoute {
     GetPage(name: homeScreenCleanerScreen, page: () =>  HomeScreenCleanerScreen()),
     GetPage(name: bookingsScreenCleanerScreen, page: () =>  BookingsScreenCleaner()),
     GetPage(name: cleanerProfileScreen, page: () =>  CleanerProfileScreen()),
+    GetPage(name: editCleanerProfileScreen, page: () =>  CleanerEditProfileScreen()),
+    GetPage(name: changePasswordCleanerScreen, page: () =>  ChangePasswordCleanerScreen()),
+    GetPage(name: bookingDetailsCleanerScreen, page: () =>  BookingDetailsCleanerScreen()),
   ];
 }

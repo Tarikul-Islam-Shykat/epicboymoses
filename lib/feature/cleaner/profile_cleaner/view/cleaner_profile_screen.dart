@@ -1,5 +1,7 @@
 import 'package:epicboymoses/core/const/icons_path.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
+import 'package:epicboymoses/feature/cleaner/profile_cleaner/controller/cleaner_profile_controller.dart';
+import 'package:epicboymoses/feature/user/cleaner_details/cleaneer_details_controller.dart';
 import 'package:epicboymoses/feature/user/user_profile/controller/user_profile_controller.dart';
 import 'package:epicboymoses/route/route.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +13,7 @@ class CleanerProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     Get.put(()=> UserProfileController());
+     CleanerProfileController controller = Get.put(CleanerProfileController());
     return Scaffold(
       backgroundColor: const Color(0xFFF7F5FA),
       body: SafeArea(
@@ -109,7 +111,7 @@ class CleanerProfileScreen extends StatelessWidget {
                           Spacer(),
                           IconButton(
                             onPressed: () {
-                              Get.toNamed(AppRoute.editProfileScreen);
+                              Get.toNamed(AppRoute.editCleanerProfileScreen);
                             },
                             icon: Icon(Icons.edit),
                             iconSize: 25,
@@ -157,7 +159,7 @@ class CleanerProfileScreen extends StatelessWidget {
                       IconsPath.pass,
                       "Change Password",
                       () {
-                        Get.toNamed(AppRoute.changePasswordScreen);
+                        Get.toNamed(AppRoute.changePasswordCleanerScreen);
                       },
                       true,
                     ),

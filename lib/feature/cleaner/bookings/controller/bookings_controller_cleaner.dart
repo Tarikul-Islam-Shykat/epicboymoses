@@ -25,7 +25,7 @@ Widget _ongoingPage() {
     children: List.generate(3, (index) {
       return InkWell(
         onTap: (){
-          Get.toNamed(AppRoute.bookingDetailsScreen);
+          Get.toNamed(AppRoute.bookingDetailsCleanerScreen);
         },
         child: Container(
           width: double.infinity,
@@ -161,7 +161,7 @@ Widget _completedPage() {
     children: List.generate(2, (index) {
       return InkWell(
         onTap: (){
-          // Get.toNamed(AppRoute.bookingDetailsScreen);
+          Get.toNamed(AppRoute.bookingDetailsCleanerScreen);
         },
         child: Container(
           width: double.infinity,
