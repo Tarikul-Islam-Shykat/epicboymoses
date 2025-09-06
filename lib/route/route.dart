@@ -1,9 +1,13 @@
+import 'package:epicboymoses/feature/admin_flow/booking_status/view/booking_status_admin.dart';
+import 'package:epicboymoses/feature/admin_flow/cleaner/view/cleaner_screen_admin.dart';
+import 'package:epicboymoses/feature/admin_flow/delivery/view/delivery_screen_admin.dart';
+import 'package:epicboymoses/feature/admin_flow/home_admin/view/home_admin_screen.dart';
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/account_approved_screen.dart';
 import 'package:epicboymoses/feature/auth/cleaner_signup/view/setup_profile_cleaner_screen.dart';
 import 'package:epicboymoses/feature/cleaner_flow/booking_details/view/booking_details_cleaner.dart';
 import 'package:epicboymoses/feature/cleaner_flow/bookings/view/bookings_screen_cleaner.dart';
 import 'package:epicboymoses/feature/cleaner_flow/bottom_navbar_cleaner/view/bottom_nav_screen_cleaner.dart';
-import 'package:epicboymoses/feature/cleaner_flow/home/view/home_screen_cleaner.dart';
+import 'package:epicboymoses/feature/cleaner_flow/home_cleaner/view/home_screen_cleaner.dart';
 import 'package:epicboymoses/feature/cleaner_flow/profile_cleaner/view/change_password_cleaner_screen.dart';
 import 'package:epicboymoses/feature/cleaner_flow/profile_cleaner/view/cleaner_profile_screen.dart';
 import 'package:epicboymoses/feature/cleaner_flow/profile_cleaner/view/edit_profile_cleaner_screen.dart';
@@ -38,6 +42,10 @@ class AppRoute {
   static String editCleanerProfileScreen = "/editCleanerProfile";
   static String changePasswordCleanerScreen = "/changePasswordCleaner";
   static String bookingDetailsCleanerScreen = "/bookingDetailsCleaner";
+  static String homeScreenAdminScreen = "/homeScreenAdmin";
+  static String deliveryAdminScreen = "/deliveryAdmin";
+  static String bookingStatusAdminScreen = "/bookingStatusAdmin";
+  static String cleanAdminScreen = "/cleanAdmin";
 
   static String getSplashScreen() => splashScreen;
 
@@ -59,5 +67,9 @@ class AppRoute {
     GetPage(name: editCleanerProfileScreen, page: () =>  CleanerEditProfileScreen()),
     GetPage(name: changePasswordCleanerScreen, page: () =>  ChangePasswordCleanerScreen()),
     GetPage(name: bookingDetailsCleanerScreen, page: () =>  BookingDetailsCleanerScreen()),
+    GetPage(name: homeScreenAdminScreen, page: () =>  HomeAdminScreen()),
+    GetPage(name: deliveryAdminScreen, page: () =>  DeliveryScreenAdmin()),
+    GetPage(name: bookingStatusAdminScreen, page: () =>  BookingStatusAdminScreen()),
+    GetPage(name: cleanAdminScreen, page: () =>  CleanScreenAdmin()),
   ];
 }

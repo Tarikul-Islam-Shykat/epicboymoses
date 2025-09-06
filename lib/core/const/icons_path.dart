@@ -19,4 +19,5 @@ class IconsPath {
   static const String profile = 'assets/icons/profile.png';
   static const String notification = 'assets/icons/notification.svg';
   static const String dollarNote = 'assets/icons/note.svg';
+  static const String broom = 'assets/icons/broom.png';
 }

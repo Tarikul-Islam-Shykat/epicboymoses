@@ -4,6 +4,7 @@ import 'package:epicboymoses/core/global_widegts/custom_text_field.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:epicboymoses/feature/auth/forget_pasword/view/forgot_pasword.dart';
 import 'package:epicboymoses/feature/auth/login/widget/privacy_text.dart';
+import 'package:epicboymoses/feature/auth/select_role/controller/selct_role_controller.dart';
 import 'package:epicboymoses/feature/auth/select_role/view/select_role_screen.dart';
 import 'package:epicboymoses/feature/user_flow/bottom_navbar/bottom_navbar.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SelectRoleController selectRoleController = Get.put(SelectRoleController());
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(left: 18.0, right: 18.0, top: 60),
@@ -67,9 +69,7 @@ class LoginView extends StatelessWidget {
             const SizedBox(height: 20),
             CustomButton(
               title: "Sign In",
-              onPressed: () {
-                Get.to(() => UserBottomNavBar());
-              },
+              onPressed: selectRoleController.homePage,
             ),
             const SizedBox(height: 10),
             Row(
