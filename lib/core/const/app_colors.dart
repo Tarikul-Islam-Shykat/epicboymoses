@@ -5,7 +5,7 @@ class AppColors {
   static const Color secondaryColor = Color(0xff000710);
   static const Color statusColor = Color(0xffFFD233);
   static const Color bgColor = Color(0xFFF7F5FA);
-  static const Color blackColor = Colors.black;
+  static const Color blackColor = Color(0xff4B4B50);
   static const Color whiteColor = Colors.white;
   static const Color grayColor = Color(0xff1E1E1E);
   static Color redcolor = Colors.red;

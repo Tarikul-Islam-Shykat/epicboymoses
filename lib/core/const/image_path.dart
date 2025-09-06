@@ -10,6 +10,8 @@ class ImagePath {
   static const String noDataFound = "assets/images/noDataFound.png";
   static const String map = "assets/images/map.png";
   static const String success = "assets/images/success.png";
+  static const String cleaner = "assets/images/cleaner.png";
+  static const String meetingIllustration = "assets/images/meetingIllustration.png";
 
 
 }
