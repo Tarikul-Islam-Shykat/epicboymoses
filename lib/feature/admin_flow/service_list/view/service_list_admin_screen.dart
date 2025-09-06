@@ -1,5 +1,6 @@
 import 'package:epicboymoses/core/const/app_colors.dart';
 import 'package:epicboymoses/core/const/icons_path.dart';
+import 'package:epicboymoses/core/style/bottom_sheet.dart';
 import 'package:epicboymoses/core/style/global_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,7 +45,10 @@ class ServiceListAdminScreen extends StatelessWidget {
                   const Spacer(),
                   InkWell(
                     splashColor: Colors.transparent,
-                    onTap: () => Navigator.pop(context),
+                    onTap: (){
+                      AddServiceBottomSheet().build(context);
+                    }
+                    ,
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       child: Icon(Icons.add, color: Colors.black, size: 25.r),
@@ -59,7 +63,10 @@ class ServiceListAdminScreen extends StatelessWidget {
               child: ListView.builder(
                 itemCount: 10,
                 itemBuilder: (context, index) => Container(
-                  margin: EdgeInsets.symmetric(horizontal: 15.w, vertical: 5.h),
+                  padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+                  decoration: BoxDecoration(color: AppColors.whiteColor, borderRadius: BorderRadius.circular(12.r)),
+
+                  margin: EdgeInsets.symmetric(horizontal: 20.w, vertical: 5.h),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -68,7 +75,7 @@ class ServiceListAdminScreen extends StatelessWidget {
                         style: globalTextStyle(
                           fontWeight: FontWeight.w500,
                           color: AppColors.blackColor,
-                          fontSize: 13.sp
+                          fontSize: 13.sp,
                         ),
                       ),
                       SizedBox(height: 2.h),
@@ -88,10 +95,24 @@ class ServiceListAdminScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                       SizedBox(height: 5.h),
-                       Row(
-                        children: [],
-                       )
+                      SizedBox(height: 5.h),
+                      Row(
+                        children: [
+                          Icon(Icons.work_outline_outlined, size: 13.r),
+                          SizedBox(width: 5.w),
+                          Text(
+                            'Weekly or fortnightly; same cleaner ',
+                            style: globalTextStyle(fontSize: 10.sp),
+                          ),
+                          SizedBox(width: 10.w),
+                          Icon(Icons.money, size: 13.r),
+                          SizedBox(width: 5.w),
+                          Text(
+                            '£19.90/h',
+                            style: globalTextStyle(fontSize: 10.sp),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),

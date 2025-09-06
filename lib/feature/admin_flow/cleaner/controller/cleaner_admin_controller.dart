@@ -24,8 +24,9 @@ Widget _approvedPage() {
   return Column(
     children: List.generate(3, (index) {
       return InkWell(
+        splashColor: Colors.transparent,
         onTap: () {
-          // Get.toNamed(AppRoute.bookingStatusAdminScreen);
+           Get.toNamed(AppRoute.cleanerDetailsAdminScreen);
         },
         child: Container(
           width: double.infinity,
@@ -126,8 +127,9 @@ Widget _pendingPage() {
   return Column(
     children: List.generate(2, (index) {
       return InkWell(
+        splashColor: Colors.transparent,
         onTap: () {
-          // Get.toNamed(AppRoute.bookingStatusAdminScreen);
+          Get.toNamed(AppRoute.cleanerDetailsAdminScreen);
         },
         child: Container(
           width: double.infinity,

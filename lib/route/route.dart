@@ -1,5 +1,6 @@
 import 'package:epicboymoses/feature/admin_flow/booking_status/view/booking_status_admin.dart';
 import 'package:epicboymoses/feature/admin_flow/cleaner/view/cleaner_screen_admin.dart';
+import 'package:epicboymoses/feature/admin_flow/cleaner_details/view/cleaner_details_screen.dart';
 import 'package:epicboymoses/feature/admin_flow/delivery/view/delivery_screen_admin.dart';
 import 'package:epicboymoses/feature/admin_flow/home_admin/view/home_admin_screen.dart';
 import 'package:epicboymoses/feature/admin_flow/profile_admin/view/individual_profile_admin_screen.dart';
@@ -52,6 +53,7 @@ class AppRoute {
   static String profileListAdminScreen = "/profileListAdmin";
   static String individualProfileListAdminScreen = "/individualProfileListAdmin";
   static String serviceListAdminScreen = "/serviceListAdmin";
+  static String cleanerDetailsAdminScreen = "/cleanerDetailsAdmin";
 
   static String getSplashScreen() => splashScreen;
 
@@ -80,5 +82,6 @@ class AppRoute {
     GetPage(name: profileListAdminScreen, page: () =>  ProfileListAdminScreen()),
     GetPage(name: individualProfileListAdminScreen, page: () =>  IndividualProfileListAdminScreen()),
     GetPage(name: serviceListAdminScreen, page: () =>  ServiceListAdminScreen()),
+    GetPage(name: cleanerDetailsAdminScreen, page: () =>  CleanerDetailsAdminScreen()),
   ];
 }
